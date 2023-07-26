@@ -1,16 +1,21 @@
-# This is a sample Python script.
+import json
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+file = open('config.json')
+
+def createArray(D,L,H):
+    print(D)
+
+def main():
+    data = json.load(file)
+    TwoD = (data['2D'])
+    ThreeD = (data['3D'])
+    length = (data['length'])
+    height = (data['height'])
 
 
-def main(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print('Array')  # Press ⌘F8 to toggle the breakpoint.
 
+    file.close()
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    main('PyCharm')
+    main()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
