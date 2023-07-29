@@ -1,6 +1,6 @@
 {
-      "2D": "True",
-      "3D":"False",
-      "length": "10",
-      "height": "10"
+      "2D": false,
+      "3D":true,
+      "col": "10",
+      "row": "10"
 }

@@ -3,28 +3,32 @@ import random
 
 file = open('config.json')
 
-def createArray(D,L,H):
+def createArray2D(col):
 
     myArray =[]
-    #2D array
-    for i in range(L):
+
+    for i in range(col):
         myArray.append(random.randint(1, 100))
-
-
     return myArray
+
+def createArray3D(col,row):
+    rows, cols = (row, col)
+    arr = [[(random.randint(1, 100))] * cols] * rows
+
+    return arr
 
 
 def main():
     data = json.load(file)
     TwoD = (data['2D'])
     ThreeD = (data['3D'])
-    length = int(data['length'])
-    height = (data['height'])
+    col = int(data['col'])
+    row = int(data['row'])
 
     if TwoD:
-        myArray=createArray(TwoD,length,height)
+        myArray=createArray2D(col)
     else:
-        createArray(ThreeD,length,height)
+        myArray = createArray3D(col,row)
 
     print(myArray)
 
