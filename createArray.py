@@ -13,7 +13,11 @@ def createArray2D(col):
 
 def createArray3D(col,row):
     rows, cols = (row, col)
-    arr = [[(random.randint(1, 100))] * cols] * rows
+    arr = [[(0)] * cols] * rows
+
+    for i in range(len(arr)):
+        for k in range (len(arr[i])):
+            arr[i][k] = (random.randint(1, 100))
 
     return arr
 
